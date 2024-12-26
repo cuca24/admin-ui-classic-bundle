@@ -1661,7 +1661,9 @@ class AssetController extends ElementControllerBase implements KernelControllerE
     /**
      * @Route("/get-folder-content-preview", name="pimcore_admin_asset_getfoldercontentpreview", methods={"GET"})
      */
-    public function getFolderContentPreviewAction(Request $request, EventDispatcherInterface $eventDispatcher, GridHelperService $gridHelperService): JsonResponse
+    public function getFolderContentPreviewAction(Request $request,
+                                                  EventDispatcherInterface $eventDispatcher,
+                                                  GridHelperService $gridHelperService): JsonResponse
     {
         $allParams = array_merge($request->request->all(), $request->query->all());
 
